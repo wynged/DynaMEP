@@ -11,7 +11,6 @@ namespace SizingToolkit
     /// </summary>
     public class DuctSizer
     {
-
         public static double DuctEquivalentDiameter(double w, double h)
         {
             double equivalentDiameter = 1.3 * Math.Pow((w * h), 0.625) / Math.Pow((w + h), 0.25);
@@ -48,7 +47,7 @@ namespace SizingToolkit
 
         public static double DuctDiameterFromPDandQ(double PD, double flow)
         {
-            double diam = Math.Pow(Math.Pow((0.109136 * flow), 1.9) / PD, (1 / 5.02));
+            double diam = Math.Pow((0.109136*Math.Pow((flow), 1.9)) / PD, (1 / 5.02));
             return diam;
         }
 

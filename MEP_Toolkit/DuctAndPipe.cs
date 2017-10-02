@@ -1,20 +1,14 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using Autodesk.DesignScript.Geometry;
-using Autodesk.DesignScript.Runtime;
 using Autodesk.Revit.DB;
 using Autodesk.Revit.DB.Mechanical;
 
 
-namespace DynaMEP
+namespace MEP.Toolkit
 {
     /// <summary>
     /// Duct and Pipe Creation tools
     /// </summary>
-    public static class DuctAndPipe
+    internal  class DuctAndPipe
     {
         /// <summary>
         /// Create a Duct Placeholder
@@ -26,7 +20,7 @@ namespace DynaMEP
         /// <param name="p1"></param>
         /// <param name="p2"></param>
         /// <returns></returns>
-        public static Duct DrawDuctPlaceholder(Document document, ElementId SystemTypeId, ElementId DuctTypeId, ElementId LevelId, Autodesk.DesignScript.Geometry.Point p1, Autodesk.DesignScript.Geometry.Point p2)
+        internal static Duct DrawDuctPlaceholder(Document document, ElementId SystemTypeId, ElementId DuctTypeId, ElementId LevelId, Autodesk.DesignScript.Geometry.Point p1, Autodesk.DesignScript.Geometry.Point p2)
         {
             XYZ xyz1 = new XYZ(p1.X, p1.Y, p1.Z);
             XYZ xyz2 = new XYZ(p2.X, p2.Y, p2.Z);

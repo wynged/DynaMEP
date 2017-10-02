@@ -5,11 +5,20 @@ using System.Text;
 using System.Threading.Tasks;
 using SizingToolkit;
 
-namespace DynaMEP
+namespace MEP.Toolkit
 {
+    /// <summary>
+    /// Duct Sizing Utilities
+    /// </summary>
     public static class DuctSizing
     {
-
+        /// <summary>
+        /// Calculate the necessary duct diameter from 
+        /// pressure drop (in/100ft) and flow  (CFM/s)
+        /// </summary>
+        /// <param name="PD"></param>
+        /// <param name="flow"></param>
+        /// <returns></returns>
         public static double EquivalentDiameter(double PD, double flow)
         {
             return SizingToolkit.DuctSizer.DuctDiameterFromPDandQ(PD, flow);
